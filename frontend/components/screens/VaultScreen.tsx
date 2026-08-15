@@ -3,11 +3,11 @@
 import React, { useMemo } from "react";
 import { SlidersHorizontal, ChevronDown } from "lucide-react";
 import { useVault } from "../context/VaultContext";
-import { GOLD, SURFACE, BORDER, TEXT_MUTED, TEXT_FAINT, FILTERS } from "../lib/constants";
-import TopBar from "./TopBar";
-import SearchBar from "./SearchBar";
-import ItemRow from "./ItemRow";
-import { EmptyState } from "./EmptyState";
+import { GOLD, SURFACE, BORDER, TEXT_MUTED, TEXT_FAINT, FILTERS } from "../../lib/constants";
+import TopBar from "../TopBar";
+import SearchBar from "../SearchBar";
+import ItemRow from "../ItemRow";
+import { EmptyState } from "../EmptyState";
 
 export default function VaultScreen() {
   const { items, setSelectedItem, setMenuItem, vaultSearch, setVaultSearch, filter, setFilter } = useVault();
