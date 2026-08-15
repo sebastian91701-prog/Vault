@@ -2,10 +2,10 @@
 
 import React, { useState } from "react";
 import { X, Eye, EyeOff, Link as LinkIcon, Star, Trash2 } from "lucide-react";
-import type { VaultItem } from "../lib/types";
+import type { VaultItem } from "../../lib/types";
 import { GOLD, SURFACE, SURFACE_2, BORDER, TEXT_MUTED, TEXT_FAINT, TYPE_META } from "../../lib/constants";
-import { apiRevealSecret } from "../lib/api-client";
-import IconBadge from "./IconBadge";
+import { apiRevealSecret } from "../../lib/api-client";
+import IconBadge from "../IconBadge";
 
 export default function ItemDetail({
   item, onClose, onToggleFav, onDelete,
