@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useVault } from "../../context/VaultContext";
+import { useVault } from "../context/VaultContext";
 import { GOLD, SURFACE, BORDER, TEXT_MUTED, TEXT_FAINT, ICON_BY_KEY } from "../../lib/constants";
 import TopBar from "../TopBar";
 import { EmptyState } from "../EmptyState";
