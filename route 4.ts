@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabaseServer } from "../../../../../lib/supabase";
-import { decryptSecret } from "../../../../../lib/crypto";
+import { getSupabaseServer } from "../lib/supabase";
+import { decryptSecret } from "../lib/crypto";
 
 // Ruta separada a propósito: el valor descifrado del secret
 // solo viaja al navegador cuando el usuario pulsa "Revelar",
