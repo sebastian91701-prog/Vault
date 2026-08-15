@@ -5,8 +5,8 @@ import {
   User, Fingerprint, Shield, Bell, Palette, HardDrive, Smartphone,
   LogOut, ChevronRight,
 } from "lucide-react";
-import { GOLD, SURFACE, SURFACE_2, BORDER, TEXT_MUTED, TEXT_FAINT } from "../../lib/constants";
-import TopBar from "../TopBar";
+import { GOLD, SURFACE, SURFACE_2, BORDER, TEXT_MUTED, TEXT_FAINT } from "../lib/constants";
+import TopBar from "./TopBar";
 
 function Row({
   icon: Icon, label, sub, right, onClick,
