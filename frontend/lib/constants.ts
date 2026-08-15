@@ -2,7 +2,7 @@ import {
   FileText, Image as ImageIcon, Video, Music, StickyNote, KeyRound,
   Link as LinkIcon, Folder, Star, Trash2, Pencil,
 } from "lucide-react";
-import type { ItemType } from "../lib/types";
+import type { ItemType } from "./types";
 
 /* ---------------------------------------------------------------- */
 /* Design tokens (dark premium vault)                                */
