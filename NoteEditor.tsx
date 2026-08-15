@@ -2,10 +2,10 @@
 
 import React, { useState } from "react";
 import { Folder, ChevronRight } from "lucide-react";
-import { useVault } from "../../context/VaultContext";
+import { useVault } from "../context/VaultContext";
 import { SURFACE, BORDER, TEXT_MUTED, TEXT_FAINT, GOLD, FOLDERS } from "../../lib/constants";
-import TopBar from "../TopBar";
-import GoldButton from "../GoldButton";
+import TopBar from "./TopBar";
+import GoldButton from "./GoldButton";
 
 export default function NoteEditor({ onCancel }: { onCancel: () => void }) {
   const { saveNote } = useVault();
