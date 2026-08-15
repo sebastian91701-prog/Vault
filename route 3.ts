@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabaseServer } from "../../../lib/supabase";
-import { encryptSecret } from "../../../lib/crypto";
+import { getSupabaseServer } from "../lib/supabase";
+import { encryptSecret } from "../lib/crypto";
 
 export async function GET() {
   const supabase = getSupabaseServer();
