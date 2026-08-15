@@ -2,11 +2,11 @@
 
 import React, { useState } from "react";
 import { KeyRound, Eye, EyeOff, RefreshCw, Folder, ChevronRight, ChevronDown } from "lucide-react";
-import { useVault } from "../context/VaultContext";
+import { useVault } from "../../context/VaultContext";
 import { SURFACE, BORDER, TEXT_MUTED, TEXT_FAINT, GOLD, FOLDERS, SECRET_TYPES } from "../../lib/constants";
-import { strengthOf, genSecret } from "../lib/utils";
-import TopBar from "./TopBar";
-import GoldButton from "./GoldButton";
+import { strengthOf, genSecret } from "../../lib/utils";
+import TopBar from "../TopBar";
+import GoldButton from "../GoldButton";
 
 export default function SecretEditor({ onCancel }: { onCancel: () => void }) {
   const { saveSecret } = useVault();
