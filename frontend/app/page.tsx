@@ -3,21 +3,20 @@
 import React from "react";
 import { VaultProvider, useVault } from "../context/VaultContext";
 import { BG, BORDER, ADDED_LABEL } from "../lib/constants";
-import NavShell from "./NavShell";
-import { Toast } from "./EmptyState";
-import HomeScreen from "./HomeScreen";
-import VaultScreen from "./VaultScreen";
-import ActivityScreen from "./ActivityScreen";
-import ProfileScreen from "./ProfileScreen";
-import AddModal from "./AddModal";
-import NoteEditor from "./NoteEditor";
-import SecretEditor from "./SecretEditor";
-import MediaEditor from "./MediaEditor";
-import ItemDetail from "./ItemDetail";
-import ItemMenuSheet from "./ItemMenuSheet";
-import RenameModal from "./RenameModal";
-import SuccessOverlay from "./SuccessOverlay";
-
+import NavShell from "../components/NavShell";
+import { Toast } from "../components/EmptyState";
+import HomeScreen from "../components/screens/HomeScreen";
+import VaultScreen from "../components/screens/VaultScreen";
+import ActivityScreen from "../components/screens/ActivityScreen";
+import ProfileScreen from "../components/screens/ProfileScreen";
+import AddModal from "../components/modals/AddModal";
+import NoteEditor from "../components/modals/NoteEditor";
+import SecretEditor from "../components/modals/SecretEditor";
+import MediaEditor from "../components/modals/MediaEditor";
+import ItemDetail from "../components/modals/ItemDetail";
+import ItemMenuSheet from "../components/modals/ItemMenuSheet";
+import RenameModal from "../components/modals/RenameModal";
+import SuccessOverlay from "../components/modals/SuccessOverlay";
 function VaultApp() {
   const {
     screen, setScreen, flow, setFlow, selectedItem, setSelectedItem,
