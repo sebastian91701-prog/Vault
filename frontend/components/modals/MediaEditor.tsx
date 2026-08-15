@@ -2,12 +2,12 @@
 
 import React, { useRef, useState } from "react";
 import { X, UploadCloud, Video, Lock, Folder, ChevronRight } from "lucide-react";
-import type { ItemType } from "../lib/types";
-import { useVault } from "../context/VaultContext";
+import type { ItemType } from "../../lib/types";
+import { useVault } from "../../context/VaultContext";
 import { SURFACE, SURFACE_2, BORDER, TEXT_MUTED, TEXT_FAINT, GOLD, GOLD_SOFT, FOLDERS, MEDIA_CONFIG, DOC_FORMATS, TYPE_META } from "../../lib/constants";
-import { formatBytes, formatDuration } from "../lib/utils";
-import TopBar from "./TopBar";
-import IconBadge from "./IconBadge";
+import { formatBytes, formatDuration } from "../../lib/utils";
+import TopBar from "../TopBar";
+import IconBadge from "../IconBadge";
 
 export default function MediaEditor({ type, onCancel }: { type: "image" | "video" | "document"; onCancel: () => void }) {
   const { saveMedia } = useVault();
