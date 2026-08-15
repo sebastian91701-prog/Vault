@@ -2,8 +2,8 @@
 
 import React from "react";
 import { Pencil, Trash2 } from "lucide-react";
-import type { VaultItem } from "../../lib/types";
-import { SURFACE, BORDER, TEXT_MUTED } from "../../lib/constants";
+import type { VaultItem } from "../lib/types";
+import { SURFACE, BORDER, TEXT_MUTED } from "../lib/constants";
 import IconBadge from "../IconBadge";
 
 export default function ItemMenuSheet({
