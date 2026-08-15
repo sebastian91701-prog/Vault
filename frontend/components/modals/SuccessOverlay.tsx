@@ -2,8 +2,8 @@
 
 import React from "react";
 import { Check } from "lucide-react";
-import { BORDER, TEXT_MUTED } from "../lib/constants";
-import GoldButton from "./GoldButton";
+import { BORDER, TEXT_MUTED } from "../../lib/constants";
+import GoldButton from "../GoldButton";
 
 export default function SuccessOverlay({
   title, message, onOk,
