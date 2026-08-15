@@ -1,4 +1,4 @@
-import type { VaultItem, ActivityEntry } from "./types";
+import type { VaultItem, ActivityEntry } from "../lib/types";
 
 async function json(res: Response) {
   const data = await res.json();
