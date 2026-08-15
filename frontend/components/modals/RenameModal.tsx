@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import type { VaultItem } from "../lib/types";
-import { GOLD, SURFACE, BORDER, TEXT_MUTED } from "../lib/constants";
+import type { VaultItem } from "../../lib/types";
+import { GOLD, SURFACE, BORDER, TEXT_MUTED } from "../../lib/constants";
 
 export default function RenameModal({
   item, onCancel, onSave,
