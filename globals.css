@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background: #0A0A0B;
+  overscroll-behavior: none;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.sheet-88 { max-height: 88vh; max-height: 88dvh; }
+.sheet-85 { max-height: 85vh; max-height: 85dvh; }
+
+@keyframes sheetIn {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate-sheet { animation: sheetIn 0.24s cubic-bezier(0.16,1,0.3,1); }
+
+@keyframes toastIn {
+  from { transform: translate(-50%, 10px); opacity: 0; }
+  to { transform: translate(-50%, 0); opacity: 1; }
+}
+.animate-toast { animation: toastIn 0.22s ease-out; }
+
+select { color-scheme: dark; }
