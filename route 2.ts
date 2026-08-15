@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSupabaseServer, VAULT_BUCKET } from "../../../../lib/supabase";
+import { getSupabaseServer, VAULT_BUCKET } from "../lib/supabase";
 
 export async function GET(req: NextRequest) {
   const path = req.nextUrl.searchParams.get("path");
