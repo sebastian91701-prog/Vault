@@ -2,8 +2,8 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { X, UploadCloud } from "lucide-react";
-import type { ItemType } from "../../lib/types";
-import { useVault } from "../../context/VaultContext";
+import type { ItemType } from "../lib/types";
+import { useVault } from "../context/VaultContext";
 import { BORDER, GOLD, GOLD_SOFT, TEXT_FAINT, TYPE_META, ADD_OPTIONS } from "../../lib/constants";
 
 export default function AddModal({ onClose }: { onClose: () => void }) {
