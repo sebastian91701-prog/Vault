@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Lock, User } from "lucide-react";
-import { useVault } from "../../context/VaultContext";
+import { useVault } from "../context/VaultContext";
 import { GOLD, GOLD_SOFT, SURFACE, BORDER, TEXT_MUTED, TYPE_META } from "../../lib/constants";
 import SearchBar from "../SearchBar";
 import ItemRow from "../ItemRow";
