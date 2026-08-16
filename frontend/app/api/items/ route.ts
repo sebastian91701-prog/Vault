@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSupabaseServer } from "../../../lib/supabase";
 import { encryptSecret } from "../../../lib/crypto";
-
+export const dynamic = "force-dynamic";
 export async function GET() {
   const supabase = getSupabaseServer();
   const { data, error } = await supabase
