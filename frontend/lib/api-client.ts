@@ -1,4 +1,5 @@
 import type { VaultItem, ActivityEntry } from "./types";
+import { getSupabaseBrowser, VAULT_BUCKET } from "./supabase-browser";
 
 async function json(res: Response) {
   const data = await res.json();
@@ -52,9 +53,22 @@ export async function apiLogActivity(action: string, itemName: string, iconKey: 
 }
 
 export async function apiUploadFile(file: File): Promise<{ filePath: string; size: number }> {
-  const formData = new FormData();
-  formData.append("file", file);
-  return json(await fetch("/api/upload", { method: "POST", body: formData }));
+  // 1. Le pedimos a nuestro backend un permiso temporal de subida (texto, sin límite de tamaño)
+  const signRes = await json(await fetch("/api/upload", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ fileName: file.name }),
+  }));
+
+  // 2. Subimos el archivo real directo a Supabase Storage — Vercel ya no participa aquí
+  const supabase = getSupabaseBrowser();
+  const { error } = await supabase.storage
+    .from(VAULT_BUCKET)
+    .uploadToSignedUrl(signRes.path, signRes.token, file);
+
+  if (error) throw new Error(error.message);
+
+  return { filePath: signRes.path, size: file.size };
 }
 
 export async function apiSignedUrl(path: string): Promise<string> {
